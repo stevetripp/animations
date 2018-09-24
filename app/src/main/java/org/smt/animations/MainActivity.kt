@@ -3,8 +3,10 @@ package org.smt.animations
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
+import android.support.v4.app.ActivityOptionsCompat
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import org.smt.animations.databinding.ActivityMainBinding
@@ -34,7 +36,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupObservers() = viewModel.apply {
         clicked.observe(this@MainActivity, Observer<Void> {
+            val intent = Intent(baseContext, ExplodingActivity::class.java)
+            val options = ActivityOptionsCompat.makeScaleUpAnimation(
+                binding.explodingActivityTextView, binding.explodingActivityTextView.x.toInt(),
+                binding.explodingActivityTextView.y.toInt(), 0, 0
+            )
+
             Toast.makeText(baseContext, "Clicked", Toast.LENGTH_LONG).show()
+            startActivity(intent, options.toBundle())
+
+//            startActivity(intent, ActivityOptionsCompat.makeCustomAnimation(baseContext, R.anim.scale_up, 0).toBundle())
         })
     }
 }
