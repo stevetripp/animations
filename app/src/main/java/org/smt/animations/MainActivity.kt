@@ -1,13 +1,13 @@
 package org.smt.animations
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProvider
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import android.content.Intent
-import android.databinding.DataBindingUtil
+import androidx.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.v4.app.ActivityOptionsCompat
-import android.support.v7.app.AppCompatActivity
+import androidx.core.app.ActivityOptionsCompat
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 import org.smt.animations.databinding.ActivityMainBinding
 import org.smt.animations.inject.Injector

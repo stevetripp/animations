@@ -1,6 +1,6 @@
 package org.smt.animations
 
-import android.support.multidex.MultiDexApplication
+import androidx.multidex.MultiDexApplication
 import com.jakewharton.threetenabp.AndroidThreeTen
 import org.smt.animations.inject.Injector
 import timber.log.Timber

@@ -3,16 +3,16 @@
 buildscript {
     ext.kotlin_version = '1.2.70'
     ext.dagger_version = '2.17'
-    ext.archLifecycleVersion = '1.1.1'
+    ext.archLifecycleVersion = '2.0.0-beta01'
     ext.timberVersion = '4.7.1'
-    ext.multiDexVersion = '1.0.3'
+    ext.multiDexVersion = '2.0.0'
     ext.threeTenABpVersion = '1.1.0'
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.0-rc03'
+        classpath 'com.android.tools.build:gradle:3.3.0-beta04'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
